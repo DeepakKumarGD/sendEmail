@@ -44,7 +44,7 @@ public class AdminController {
     @RequestMapping(value = "upload-file", method = RequestMethod.POST)
     public ResponseEntity<?> saveUserProfile(@RequestPart MultipartFile file) throws Exception {
         log.info("Signed Document Upload Started");
-        return new ResponseEntity(this.adminService.saveUserProfile(file), HttpStatus.OK);
+        return new ResponseEntity<>(this.adminService.saveUserProfile(file), HttpStatus.OK);
     }
     //https://myaccount.google.com/lesssecureapps
 }
